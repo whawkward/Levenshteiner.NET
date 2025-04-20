@@ -89,3 +89,30 @@
 | CalculateLevenshteinDistance   | .NET 9.0 | .NET 9.0 | abc                  | chara(...)s key [23] |   642.643 ns |  4.2631 ns |  3.9877 ns |   641.715 ns |         - |
 | CalculateLevenshteinOperations | .NET 9.0 | .NET 9.0 | abc                  | chara(...)s key [23] | 1,034.714 ns | 19.9858 ns | 29.9138 ns | 1,038.535 ns |    1392 B |
 | ToLevenshteinDistanceModel     | .NET 9.0 | .NET 9.0 | abc                  | chara(...)s key [23] | 1,069.794 ns | 21.3860 ns | 29.9802 ns | 1,059.640 ns |    1696 B |
+
+
+Using class
+
+| Method                         | Job      | Runtime  | Src | Target | Mean      | Error     | StdDev    | Allocated |
+|------------------------------- |--------- |--------- |---- |------- |----------:|----------:|----------:|----------:|
+| CalculateLevenshteinDistance   | .NET 8.0 | .NET 8.0 | ?   |        |  4.042 ns | 0.0629 ns | 0.0588 ns |         - |
+| CalculateLevenshteinOperations | .NET 8.0 | .NET 8.0 | ?   |        |  3.886 ns | 0.0470 ns | 0.0440 ns |         - |
+| ToLevenshteinDistanceModel     | .NET 8.0 | .NET 8.0 | ?   |        | 22.137 ns | 0.3246 ns | 0.2878 ns |      96 B |
+| ToLevenshteinDistanceModelOut  | .NET 8.0 | .NET 8.0 | ?   |        | 23.626 ns | 0.2505 ns | 0.2092 ns |      96 B |
+| CalculateLevenshteinDistance   | .NET 9.0 | .NET 9.0 | ?   |        |  3.379 ns | 0.0627 ns | 0.0586 ns |         - |
+| CalculateLevenshteinOperations | .NET 9.0 | .NET 9.0 | ?   |        |  3.423 ns | 0.0665 ns | 0.0590 ns |         - |
+| ToLevenshteinDistanceModel     | .NET 9.0 | .NET 9.0 | ?   |        | 21.097 ns | 0.4252 ns | 0.3978 ns |      96 B |
+| ToLevenshteinDistanceModelOut  | .NET 9.0 | .NET 9.0 | ?   |        | 23.024 ns | 0.2362 ns | 0.2209 ns |      96 B |
+
+Using struct
+
+| Method                         | Job      | Runtime  | Src | Target | Mean      | Error     | StdDev    | Allocated |
+|------------------------------- |--------- |--------- |---- |------- |----------:|----------:|----------:|----------:|
+| CalculateLevenshteinDistance   | .NET 8.0 | .NET 8.0 | ?   |        |  4.151 ns | 0.0774 ns | 0.0724 ns |         - |
+| CalculateLevenshteinOperations | .NET 8.0 | .NET 8.0 | ?   |        |  3.923 ns | 0.0528 ns | 0.0441 ns |         - |
+| ToLevenshteinDistanceModel     | .NET 8.0 | .NET 8.0 | ?   |        | 20.257 ns | 0.2899 ns | 0.2421 ns |      56 B |
+| ToLevenshteinDistanceModelOut  | .NET 8.0 | .NET 8.0 | ?   |        | 22.221 ns | 0.4641 ns | 0.6946 ns |      56 B |
+| CalculateLevenshteinDistance   | .NET 9.0 | .NET 9.0 | ?   |        |  3.317 ns | 0.0507 ns | 0.0449 ns |         - |
+| CalculateLevenshteinOperations | .NET 9.0 | .NET 9.0 | ?   |        |  3.349 ns | 0.0662 ns | 0.0619 ns |         - |
+| ToLevenshteinDistanceModel     | .NET 9.0 | .NET 9.0 | ?   |        | 19.783 ns | 0.4024 ns | 0.3764 ns |      56 B |
+| ToLevenshteinDistanceModelOut  | .NET 9.0 | .NET 9.0 | ?   |        | 19.242 ns | 0.3918 ns | 0.3665 ns |      56 B |
